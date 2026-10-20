@@ -1,0 +1,398 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #202820;
+  background: #f5f6f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(215, 230, 204, 0.52), transparent 38rem),
+    #f5f6f1;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  width: min(100% - 48px, 1080px);
+  margin: 0 auto;
+  padding: 38px 0 72px;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 16px;
+  background: #315b3e;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(49, 91, 62, 0.18);
+}
+
+.brand-lockup h1 {
+  margin: 1px 0 0;
+  font-size: 23px;
+  letter-spacing: -0.8px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #829082;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.25px;
+}
+
+.stock-count,
+.inventory-total {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #e5e9e0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  color: #59665a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stock-count {
+  padding: 10px 14px;
+}
+
+.count-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #5d9b64;
+  box-shadow: 0 0 0 3px #e8f3e6;
+}
+
+.dashboard {
+  display: grid;
+  gap: 20px;
+}
+
+.panel {
+  overflow: hidden;
+  border: 1px solid #e8ebe4;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 14px 40px rgba(39, 55, 38, 0.045);
+}
+
+.form-panel {
+  padding: 28px 32px 30px;
+  background: linear-gradient(115deg, #fff 50%, #f8fbf5);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.section-heading h2 {
+  margin: 6px 0 0;
+  color: #273329;
+  font-size: 21px;
+  letter-spacing: -0.55px;
+}
+
+.section-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 12px;
+  background: #edf4e9;
+  color: #47744c;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.section-description {
+  margin: 9px 0 22px;
+  color: #7b867b;
+  font-size: 13px;
+}
+
+.product-form {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.5fr) minmax(130px, 0.8fr) auto;
+  align-items: end;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  color: #485448;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.field input {
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+  padding: 0 13px;
+  border: 1px solid #e3e8df;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  color: #263128;
+  font-size: 13px;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.field input::placeholder {
+  color: #a7afa6;
+}
+
+.field input:focus {
+  border-color: #78a17b;
+  box-shadow: 0 0 0 3px rgba(100, 149, 105, 0.14);
+}
+
+.primary-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #315b3e;
+  color: white;
+  font-size: 13px;
+  font-weight: 650;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+  background: #264a32;
+}
+
+.primary-button span {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.inventory-panel {
+  padding: 28px 32px 12px;
+}
+
+.inventory-heading {
+  margin-bottom: 23px;
+}
+
+.inventory-total {
+  padding: 7px 11px;
+  background: #f7f8f5;
+  font-size: 11px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.inventory-table th {
+  padding: 12px 14px;
+  border-top: 1px solid #eef0eb;
+  border-bottom: 1px solid #eef0eb;
+  background: #fafbf9;
+  color: #899389;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.inventory-table th:first-child,
+.inventory-table td:first-child {
+  padding-left: 8px;
+  width: 58px;
+}
+
+.inventory-table th:last-child,
+.inventory-table td:last-child {
+  text-align: right;
+}
+
+.inventory-table td {
+  padding: 15px 14px;
+  border-bottom: 1px solid #f0f1ed;
+  color: #5e695f;
+  font-size: 13px;
+}
+
+.inventory-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.row-number {
+  color: #9da69c !important;
+  font-size: 11px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+.product-name {
+  color: #2d382e !important;
+  font-weight: 650;
+}
+
+.quantity-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 7px;
+  background: #eff5ec;
+  color: #547653;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.delete-button {
+  padding: 6px 9px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: #a07068;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.delete-button:hover {
+  border-color: #f0dfdc;
+  background: #fcf5f3;
+  color: #9b5147;
+}
+
+.empty-state {
+  padding: 44px 16px !important;
+  text-align: center !important;
+}
+
+.empty-state > * {
+  display: block;
+}
+
+.empty-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 12px;
+  place-items: center;
+  border-radius: 12px;
+  background: #f0f5ed;
+  color: #638262;
+  font-size: 19px;
+}
+
+.empty-state strong {
+  margin-bottom: 5px;
+  color: #485448;
+  font-size: 13px;
+}
+
+.empty-state span:last-child {
+  color: #929b91;
+  font-size: 12px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@media (max-width: 680px) {
+  .app-shell {
+    width: min(100% - 32px, 520px);
+    padding-top: 24px;
+  }
+
+  .site-header {
+    margin-bottom: 24px;
+  }
+
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+  }
+
+  .brand-lockup h1 {
+    font-size: 21px;
+  }
+
+  .stock-count {
+    padding: 8px 11px;
+    font-size: 11px;
+  }
+
+  .form-panel,
+  .inventory-panel {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .product-form {
+    grid-template-columns: 1fr;
+  }
+
+  .primary-button {
+    width: 100%;
+  }
+
+  .inventory-table {
+    min-width: 470px;
+  }
+}
